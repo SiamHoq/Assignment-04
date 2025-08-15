@@ -3,7 +3,7 @@
 function totalFine( fare ) {
 
     if(typeof fare !== "number" || fare < 1){
-        return "invalid";
+        return "Invalid";
     }
     else{
         return fare + fare * (20/100) + 30
@@ -20,7 +20,7 @@ function totalFine( fare ) {
 function  onlyCharacter( str ) {
     
     if(typeof str !== "string"){
-        return 'invalid';
+        return 'Invalid';
     }
     const space = str.split(" ");
     let replace = "";
@@ -45,14 +45,14 @@ function  onlyCharacter( str ) {
 function  bestTeam( player1, player2 ) {
 
     if( typeof player1 !== "object" || typeof player2 !== "object"){
-        return 'invalid';
+        return 'Invalid';
     }
 
  const player1TotalFaul = player1.foul + player1.cardY + player1.cardR
  const player2TotalFaul = player2.foul + player2.cardY + player2.cardR
 
  if(player1TotalFaul === player2TotalFaul){
-    return "tie";
+    return "Tie";
  }
  else if(player1TotalFaul < player2TotalFaul){
     return player1.name;
@@ -71,7 +71,7 @@ function  bestTeam( player1, player2 ) {
 
 function  isSame(arr1 , arr2 ) {
     if(! Array.isArray(arr1) || ! Array.isArray(arr2)){
-        return 'invalid';
+        return 'Invalid';
     }
     else if(arr1.length !== arr2.length){
         return false;
@@ -102,7 +102,7 @@ function  isSame(arr1 , arr2 ) {
 function  resultReport( marks ) {
     
     if(!Array.isArray(marks)){
-        return "invalid";
+        return "Invalid";
     }
 
 

@@ -7,7 +7,7 @@
 function  resultReport( marks ) {
     
     if(!Array.isArray(marks)){
-        return "invalid";
+        return "Invalid";
     }
 
 

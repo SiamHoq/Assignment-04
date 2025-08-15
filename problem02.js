@@ -1,7 +1,7 @@
 function  onlyCharacter( str ) {
           // You have to write your code here
     if(typeof str !== "string"){
-        return 'invalid';
+        return 'Invalid';
     }
     const space = str.split(" ");
     let replace = "";
