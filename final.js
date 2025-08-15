@@ -1,4 +1,4 @@
-//problem-01
+//problem-01  Train TT's Fine Calculator
 
 function totalFine( fare ) {
 
@@ -12,13 +12,13 @@ function totalFine( fare ) {
 
 }
 
- console.log(totalFine(200));
+//  console.log(totalFine(200));
 
 
-// problem-02
+// problem-02 Clean & Capitalize Characters
 
 function  onlyCharacter( str ) {
-          // You have to write your code here
+    
     if(typeof str !== "string"){
         return 'invalid';
     }
@@ -31,16 +31,16 @@ function  onlyCharacter( str ) {
     return replace;
 }
 
-console.log(onlyCharacter(" Cy   bar- At  tac k  "))
+// console.log(onlyCharacter(" Cy   bar- At  tac k  "))
 
 
-// problem-03
+// problem-03  FIFA Best Team Award
 
-const team = [
-    { name: "Brazil", foul: 5, cardY: 1, cardR: 0 },
-    { name: "Argentina", foul: 7, cardY: 0, cardR: 0 }
+// const team = [
+//     { name: "Brazil", foul: 5, cardY: 1, cardR: 0 },
+//     { name: "Argentina", foul: 7, cardY: 0, cardR: 0 }
 
-    ]
+//     ]
 
 function  bestTeam( player1, player2 ) {
 
@@ -62,7 +62,7 @@ function  bestTeam( player1, player2 ) {
  }
 
 }
- console.log(bestTeam(team[0],team[1]));
+//  console.log(bestTeam(team[0],team[1]));
 
 
 
@@ -85,8 +85,52 @@ function  isSame(arr1 , arr2 ) {
     return true;
 }
 
-const array1 = [1 , 4 , 5];
+// const array1 = [1 , 4 , 5];
 
-const array2 = [1 , 4 , 5];
+// const array2 = [1 , 4 , 5];
 
-console.log(isSame(array1,array2))
+// console.log(isSame(array1,array2))
+
+
+
+
+// Problem-05: Exam Result Report Generator
+
+// const array = [98, 87, 67, 91, 92, 33, 87]
+// const array = [];
+
+function  resultReport( marks ) {
+    
+    if(!Array.isArray(marks)){
+        return "invalid";
+    }
+
+
+    let pass = 0;
+    let fail = 0;
+    let finalScore = 0;
+
+
+    for(const num of marks){
+        finalScore = finalScore + num;
+        if(num >= 40){
+          pass++;
+        }
+        else{
+          fail++;
+        }
+
+    }
+    
+    finalScore = finalScore / marks.length;
+
+    if (marks.length === 0){
+    finalScore = 0;
+  }
+     
+    return {"finalScore": Math.round(finalScore), "pass": pass, "fail": fail};
+
+}
+
+// const result = resultReport(array);
+// console.log(result);
